@@ -13,7 +13,7 @@ Get all of the following for as little as $4 per month:
 
 - #### [EventWar](EventWar.md)
 - #### [TownyCamps](TownyCamps.md)
-- #### [SiegeWarConquest](SiegeWarConquest.md)
+- #### [SiegeConquest](SiegeConquest.md)
 - #### [TownyRTP](TownyRTP.md)
 - #### [TownyWaypointTravel](TownyWaypointTravel.md)
 - #### [TownyHistories](TownyHistories.md)
