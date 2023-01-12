@@ -35,6 +35,8 @@ Battles last a configurable length of time or until the CaptureSite runs out of 
 
 When a Battle starts, all members of the defending and attacking towns will receive two boss bars, one showing the remaining time, and one showing the CaptureSite HP. 
 
+The CaptureSite's backing Town will have the AdminEnabledPVP setting flipped to true meaning PVP will happen regardless of the Town's normal setting (this is undone when the Battle ends.)
+
 A CaptureSites's HP is altered by players standing within the CaptureSite's Homeblock. The HP is harmed when attackers outnumber the defenders. When defenders outnumber the attackers, the HP is healed.
 
 If the HP stat goes down to 0, the attackers win. If the timer runs out, the defenders win.
