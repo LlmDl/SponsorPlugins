@@ -4,8 +4,9 @@ TownyCaptureSites is a plugin created by LlmDl, which converts Towny Towns into 
 
 #### Installation
 CaptureSites is installed easily:
+- Make sure you have a Towny installed which is at least version 0.98.6.0.
 - Add the TownyCaptureSites.jar file to your plugin folder and start your server.
-- Run `/ta capturesite installperms` in game to give the permission nodes.
+- Run `/ta capturesites installperms` in game to give the permission nodes.
     - By default all town members will be able to use `/t defend` which teleports them to CaptureSites with active battles.
     - Mayors, Assistants and Sheriffs will also receive the node for using `/t capture` to initiate CaptureSites battles.
     - You can optionally give all town members this permission using the following command: `/ta townyperms group towns.default addperm towny.command.town.capture`.
@@ -15,6 +16,7 @@ CaptureSites is installed easily:
     - Edit the file without using tabs (which would break the yaml formatting,) and then save the file.
     - Use `/ta reload townycapturesites` to reload the config file in game.
 - (Optional) Install [Dynmap](https://dev.bukkit.org/projects/dynmap) and [Dynmap-Towny](https://github.com/TownyAdvanced/Dynmap-Towny/releases) in order highlight CaptureSite locations on the Dynmap plugin map.
+- (Optional) Install [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) in order to use the Placeholders listed below.
 
 #### CaptureSite Creation
 CaptureSites are created by admins using the following steps:
@@ -33,11 +35,11 @@ Once the command is used, that player's Town cannot use `/t capture` again for a
 
 Battles last a configurable length of time or until the CaptureSite runs out of configurable amount of HP.
 
-When a Battle starts, all members of the defending and attacking towns will receive two boss bars, one showing the remaining time, and one showing the CaptureSite HP. 
+When a Battle starts, all members of the defending and attacking towns will receive two boss bars, one showing the remaining time, and one showing the CaptureSite HP.
 
-The CaptureSite's backing Town will have the AdminEnabledPVP setting flipped to true meaning PVP will happen regardless of the Town's normal setting (this is undone when the Battle ends.)
+The CaptureSite's backing Town will have the AdminEnabledPVP setting flipped to true meaning PVP will happen regardless of the Town's normal setting (this is undone when the Battle ends.) 
 
-A CaptureSites's HP is altered by players standing within the CaptureSite's Homeblock. The HP is harmed when attackers outnumber the defenders. When defenders outnumber the attackers, the HP is healed.
+A CaptureSites's HP is altered by players standing within the CaptureSite. Each CaptureSite can be configured to be attacked/healed only from within the HomeBlock or from anywhere in the CaptureSite (using `/ta capturesite togglehomeblock`.) The HP is harmed when attackers outnumber the defenders. When defenders outnumber the attackers, the HP is healed.
 
 If the HP stat goes down to 0, the attackers win. If the timer runs out, the defenders win.
 
@@ -48,7 +50,7 @@ If a snapshot was made of the CaptureSite, it will start to regenerate back to t
 #### CaptureSites
 CaptureSites are converted Towns, which are fought over by players with Towns. A controlling town can receive a configurable amount of money every hour.
 
-Players are not allowed to build/destroy inside of CaptureSites, however CaptureSites can be damaged by explosions. If a snapshot is made of a CaptureSite, any damage that does occur will be reverted after a battle.
+Players are not allowed to build/destroy inside of CaptureSites, however CaptureSites can be damaged by explosions. There is a configurable option which allows defenders to use Switches. If a snapshot is made of a CaptureSite, any damage that does occur will be reverted after a battle.
 
 You can view a list of CaptureSites using the `/towny capturesites` command.
 
@@ -84,6 +86,7 @@ Their colouring will also be affected:
     regenerate - Uses the snapshot to regenerate a CaptureSite at your location.
     removecooldown - Removes the after-battle cooldown on a CaptureSite at your location.
     removedefender - Removes the defending town on a CaptureSite at your location.
+    togglehomeblock - Toggles whether the CaptureSite HP is affected only in the homeblock, or site-wide.
     removesite - Removes a CaptureSite at your location.
   
 /ta reload townycapturesites - reloads the lang file, config file and database.
@@ -94,3 +97,15 @@ Their colouring will also be affected:
 towny.command.town.capture - used for /t capture.
 
 towny.command.town.defend - used for /t defend.
+
+#### PAPI Placeholders
+
+`%townycapturesites_next_capture_site_time_remaining%` - Displays how much time is left before the next available capturesite can be captured.
+
+`%townycapturesites_next_capture_site_name%` - Displays the name of the next available CaptureSite.
+
+#### Events
+
+CaptureSiteCapturedEvent - thrown when a CaptureSite is taken by an attacker.
+
+CaptureSiteDefendedEvent - thrown when a CaptureSite is defended against.
