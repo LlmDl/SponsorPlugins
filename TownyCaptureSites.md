@@ -22,7 +22,7 @@ CaptureSites is installed easily:
 CaptureSites are created by admins using the following steps:
 - While at a location you like use `/ta town new NAME npc`, in order to make a town. You can add plots to your town using `/ta plot set NAME`. Alternatively you can create the town like normal and not use any admin commands until the end when you run `/ta set mayor NAME npc`.
 
-- CaptureSites have an HP stat which must be attacked, this HP is only dropped in the Town/CaptureSite's homeblock, so make sure you have set your homeblock where you want, you can use `/t set homeblock` to move a homeblock that isn't where you want it.
+- CaptureSites have an HP stat which must be attacked, this HP is only dropped in the Town/CaptureSite's homeblock, so make sure you have set your homeblock where you want, you can use `/t set homeblock` to move a homeblock that isn't where you want it. If you want to make the HP stat affected by players site-wide use the `/ta capturesite togglehomeblock` command now.
 
 - When you have everything set you will use `/ta capturesite addsite`. If you wish to have CaptureSites revert back after battles use `/ta capturesite makesnapshot`.
 
