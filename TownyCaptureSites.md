@@ -1,6 +1,6 @@
 # TownyCaptureSites
 
-TownyCaptureSites is a plugin created by LlmDl, which converts Towny Towns into CaptureSites, which then act as Capturable locations that Towns can take control of, and gain money from.
+TownyCaptureSites is a plugin created by LlmDl, which converts Towny Towns into CaptureSites, which then act as Capturable locations that Towns can take control of, gaining money or items as a reward.
 
 #### Installation
 CaptureSites is installed easily:
