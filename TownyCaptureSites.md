@@ -63,6 +63,8 @@ A town that controls one or more CaptureSites will have a `[CaptureSites]` compo
 
 You can view information about a specific CaptureSite using the `/t [SiteName]` command.
 
+After a Town captures a CaptureSite (either via a battle, or no-contest,) there is a configurable cooldown before the CaptureSite can be captured again. When a cooldown ends there is a global announcement.
+
 #### CaptureSites Rewards
 By default CaptureSites will reward towns with money. But on a per-Site basis you can alternatively set two types of item-based rewards:
   - Fixed Item(s) - This gives a list of items (which can be just one item,) to the defending town, every hour.
@@ -130,3 +132,5 @@ towny.command.town.collectrewards - used for /t collectrewards.
 CaptureSiteCapturedEvent - thrown when a CaptureSite is taken by an attacker.
 
 CaptureSiteDefendedEvent - thrown when a CaptureSite is defended against.
+
+CaptureSiteCaptureCommandEvent - a cancellable event which is thrown when /t capture is used.
