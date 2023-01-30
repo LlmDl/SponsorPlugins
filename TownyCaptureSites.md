@@ -127,9 +127,9 @@ towny.command.town.collectrewards - used for /t collectrewards.
 
 `%townycapturesites_next_capture_site_name%` - Displays the name of the next available CaptureSite.
 
-`%townycapturesites_capture_site_name_SITENAMEHERE%` - Displays the Name of the CaptureSite.
+`%townycapturesites_capture_site_name_SITENAMEHERE%` - Displays the Name of the specified CaptureSite.
 
-`%townycapturesites_capture_site_time_remaining_SITENAMEHERE%` - Displays the amount of time remaining on a CaptureSite's after-battle cooldown.
+`%townycapturesites_capture_site_time_remaining_SITENAMEHERE%` - Displays the amount of time remaining on the specified CaptureSite's after-battle cooldown.
 
 #### Events
 
