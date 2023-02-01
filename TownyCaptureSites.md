@@ -40,6 +40,8 @@ Once the command is used, that player's Town cannot use `/t capture` again for a
 
 Battles last a configurable length of time or until the CaptureSite runs out of configurable amount of HP.
 
+If it is enabled in the config file, CaptureSites can have a dynamic HP setting, determined by how many attacking players are online vs defending players. If the attackers outweigh the defenders, the Site will have a higher HP and vice versa. It is also an option for the HP to rebalance as attacking and defending players log on and off during active CaptureSite Battles.
+
 When a Battle starts, all members of the defending and attacking towns will receive two boss bars, one showing the remaining time, and one showing the CaptureSite HP.
 
 The CaptureSite's backing Town will have the AdminEnabledPVP setting flipped to true meaning PVP will happen regardless of the Town's normal setting (this is undone when the Battle ends.) 
