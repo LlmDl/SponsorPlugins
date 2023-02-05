@@ -30,7 +30,7 @@ Optionally, peaceful towns with no nation can be annexed/conquered when a nation
   
 version:
   # This is the current version.  Please do not edit.
-  version: '1.4'
+  version: '1.7'
   
 annexation_settings:
   
@@ -88,3 +88,8 @@ town_settings:
 The same multi-language that exists in Towny, SiegeWar and other TownyAdvanced plugins is also available in SiegeConquest.
 
 See the [Towny wiki for details.](https://github.com/TownyAdvanced/Towny/wiki/How-Towny-Works#multi-language)
+
+
+### Commands
+
+`/ta reload siegeconquest` - Reloads the config and language files.
