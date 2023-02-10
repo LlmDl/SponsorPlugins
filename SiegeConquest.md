@@ -1,5 +1,5 @@
 # SiegeConquest
-A SiegeWar add-on for originally made for earthcraft.me, with optional, old-school Conquering/Annexing.
+A SiegeWar add-on for originally made for MineEarth.co, with optional, old-school Conquering/Annexing.
 
 **SiegeConquest adds a choice to the standard SiegeWar invasion system.**
 
