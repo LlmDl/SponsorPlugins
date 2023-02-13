@@ -65,6 +65,8 @@ A town that controls one or more CaptureSites will have a `[CaptureSites]` compo
 
 You can view information about a specific CaptureSite using the `/t [SiteName]` command.
 
+CaptureSites can have a required TownLevel. By default they do not, but if the admin has set a required TownLevel via `/ta capturesites gui`, then in order for a town to initiate a capture battle, their town must meet the level requirement. If a defending town has their TownLevel drop below the requirement they will not receive the rewards, and they will award a no-contest win if another town attempts to capture the site.
+
 After a Town captures a CaptureSite (either via a battle, or no-contest,) there is a configurable cooldown before the CaptureSite can be captured again. When a cooldown ends there is a global announcement.
 
 #### CaptureSites Rewards
