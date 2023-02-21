@@ -17,6 +17,7 @@ CaptureSites is installed easily:
     - Edit the file without using tabs (which would break the yaml formatting,) and then save the file.
     - Use `/ta reload townycapturesites` to reload the config file in game.
 - (Optional) Install [Dynmap](https://dev.bukkit.org/projects/dynmap) and [Dynmap-Towny](https://github.com/TownyAdvanced/Dynmap-Towny/releases) in order highlight CaptureSite locations on the Dynmap plugin map.
+- (Optional) Install [MapTowny](https://github.com/TownyAdvanced/MapTowny) and any of the [supported mappers](https://github.com/TownyAdvanced/MapTowny#dependencies) in order highlight CaptureSite locations on your server mapper.
 - (Optional) Install [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) in order to use the Placeholders listed below.
 - (Optional) Install [Slimefun](https://github.com/Slimefun/Slimefun4), [MMOItems](https://www.spigotmc.org/resources/mmoitems-premium.39267/) or [MythicMobs](https://www.spigotmc.org/resources/%E2%9A%94-mythicmobs-free-version-%E2%96%BAthe-1-custom-mob-creator%E2%97%84.5702/) to use their custom Items as rewards for CaptureSites.
 
@@ -65,7 +66,7 @@ A town that controls one or more CaptureSites will have a `[CaptureSites]` compo
 
 You can view information about a specific CaptureSite using the `/t [SiteName]` command.
 
-CaptureSites can have a required TownLevel. By default they do not, but if the admin has set a required TownLevel via `/ta capturesites gui`, then in order for a town to initiate a capture battle, their town must meet the level requirement. If a defending town has their TownLevel drop below the requirement they will not receive the rewards, and they will award a no-contest win if another town attempts to capture the site.
+CaptureSites can have a required minimum and maximum TownLevel. By default they do not, but if the admin has set a required min or max TownLevels via `/ta capturesites gui`, then in order for a town to initiate a capture battle, their town must be within the min and max settings. If a defending town has their TownLevel drop above or below the requirement they will not receive the rewards, and they will award a no-contest win if another town attempts to capture the site.
 
 After a Town captures a CaptureSite (either via a battle, or no-contest,) there is a configurable cooldown before the CaptureSite can be captured again. When a cooldown ends there is a global announcement.
 
@@ -80,8 +81,8 @@ The items given as rewards can be Minecraft items, or if you have them installed
 
 You can switch back to Money rewards using the same `/ta capturesite gui` -> "Set Reward Type" option. The amount given is set in the config and is the same for every CaptureSite.
 
-#### Dynmap-Towny Integration
-If you have [Dynmap-Towny](https://github.com/TownyAdvanced/Dynmap-Towny/releases) installed then the Towns which have been converted to CaptureSites will appear with altered InfoWindows when clicked upon.
+#### Dynmap-Towny / MapTowny Integration
+If you have [Dynmap-Towny](https://github.com/TownyAdvanced/Dynmap-Towny/releases) or [MapTowny](https://github.com/TownyAdvanced/MapTowny) installed then the Towns which have been converted to CaptureSites will appear with altered InfoWindows when clicked upon.
 
 Their colouring will also be affected:
   - The fill colour is replaced with a hex colour set in the config.
