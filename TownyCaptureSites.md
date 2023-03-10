@@ -81,6 +81,8 @@ The items given as rewards can be Minecraft items, or if you have them installed
 
 You can switch back to Money rewards using the same `/ta capturesite gui` -> "Set Reward Type" option. The amount given is set in the config and is the same for every CaptureSite.
 
+The amount of money which is rewarded is set using `/ta capturesite rewardmoney {amount}`, by default money rewards start with what is set in the config.
+
 #### Dynmap-Towny / MapTowny Integration
 If you have [Dynmap-Towny](https://github.com/TownyAdvanced/Dynmap-Towny/releases) or [MapTowny](https://github.com/TownyAdvanced/MapTowny) installed then the Towns which have been converted to CaptureSites will appear with altered InfoWindows when clicked upon.
 
@@ -110,6 +112,7 @@ Their colouring will also be affected:
     gui - Opens the GUI which has the below commands and more.
     makesnapshot - Creates a snapshot of the CaptureSite, used to regenerate when a battle is over, at your location.
     regenerate - Uses the snapshot to regenerate a CaptureSite at your location.
+    rewardmoney {amount} - Used to set how much money is awarded on a per-site basis.
     removecooldown - Removes the after-battle cooldown on a CaptureSite at your location.
     removedefender - Removes the defending town on a CaptureSite at your location.
     togglehomeblock - Toggles whether the CaptureSite HP is affected only in the homeblock, or site-wide.
