@@ -2,7 +2,7 @@
 
 *Helping your new players get a home in a town quick!*
 
-A town-less player is able to use the command `/town rtp` which will teleport them to a random town where they can purchase a for-sale plot.
+A town-less player is able to use the command `/town rtp` which will teleport them to a random town where they can purchase a for-sale plot (the plot is a default/residential type.)
 
 The Town must be open, public, have plots for sale and the player must be able to afford the plot they're being teleported to.
 
