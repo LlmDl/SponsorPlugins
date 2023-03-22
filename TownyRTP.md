@@ -11,7 +11,11 @@ The player will be limited by Towny's features:
   - They cannot be an outlaw of the Town.
   - They will be limited by Towny's Teleport Warmups and Cooldowns.
   - They will be limited by Towny's config's prevent_town_spawn_in settings.
+
   
+Additionally, when a player joins a town, is stood in the town's area, and doesn't have any land there, they will be offered to be teleported to a plot, which is for sale and that they can afford.
+
+
 Additionally, the plugin will throw both a TownSpawnEvent that may be cancelled by other plugins, making this a seamless addition when other plugins are limiting Towny's town spawning.
 TownyRTP also fires it's own TownyRTPEvent if you want to specifically target RTP teleport events.
 
