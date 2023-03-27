@@ -56,7 +56,7 @@ When a battle ends, there is a configurable cooldown placed on the CaptureSite.
 If a snapshot was made of the CaptureSite, it will start to regenerate back to the original state.
 
 #### CaptureSites
-CaptureSites are converted Towns, which are fought over by players with Towns. A controlling town can receive a configurable amount of money or items every hour.
+CaptureSites are converted Towns, which are fought over by players with Towns. A controlling town can receive a configurable amount of money or items every reward-time-period (defaults to an hour.)
 
 Players are not allowed to build/destroy inside of CaptureSites, however CaptureSites can be damaged by explosions. There is a configurable option which allows defenders to use Switches. If a snapshot is made of a CaptureSite, any damage that does occur will be reverted after a battle.
 
