@@ -1,4 +1,10 @@
 # SiegeConquest
+----
+
+**Update April 13, 2023: This plugin can be ignored if you're using SiegeWar 2.0.0 or newer, as SiegeWar has re-added true-conquering (what his plugin called Annexing.) If you are using SiegeWar 1.4.0 this plugin will still be of use.**
+
+----
+
 A SiegeWar add-on for originally made for MineEarth.co, with optional, old-school Conquering/Annexing.
 
 **SiegeConquest adds a choice to the standard SiegeWar invasion system.**
