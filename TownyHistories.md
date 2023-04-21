@@ -14,6 +14,8 @@ Ruins appear on Towny's ASCII map.
 
 Ruins' townblocks which are claimed by a town are removed from the ruin. If a ruin's homeblock is claimed by a town the ruin is removed entirely.
 
+Optionally, you can prevent claiming either only the old homeblocks or any part of the ruin.
+
 Admins can optionally resurrect deleted towns.
 
 Note: this plugin somewhat assumes you have the revert-on-unclaim feature deactivated. This is not a hard-restriction, but future features will likely mean restoring the ruin would be detrimental.
@@ -41,12 +43,10 @@ TownyHistories uses Towny's multi-language system, allowing your players to see 
 ### Config
 ```
   
+  
 version:
   # This is the current version.  Please do not edit.
-  version: 0.0.24
-  # This is for showing the changelog on updates.  Please do not edit.
-  last_run_version: 0.0.22
- 
+  version: 0.0.26
   
 third_party:
   dynmap:
@@ -69,6 +69,13 @@ ruin_settings:
   # Setting this to false will allow people to steal the lectern books before the ruin is deleted.
   protect_lectern_book: 'true'
   
+  # When set to true, players will not be able to claim any land that belongs to a ruin.
+  prevent_claiming_ruin: 'false'
+  
+  # When set to true, players will not be able to claim the ruin's homeblock.
+  prevent_claiming_homeblock: 'false'
+  
   # Defaults to ruin, any other dynmap marker can be used: https://github.com/webbukkit/dynmap/tree/v3.0/DynmapCore/src/main/resources/markers 
   marker_icon: ruin
+
 ```
