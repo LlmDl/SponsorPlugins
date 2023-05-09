@@ -64,7 +64,10 @@ camps:
   # How long after making a camp does a player have to wait to make a new one.
   # Set to 0h, to use no cooldown.
   creation_cooldown: 0h
-  
+
+  # When set above zero, this is determine the amount of money required to claim a camp.
+  creation_cost: 0.0
+
   # Should the camp location be shown on the /resident status screen page.
   show_location_on_status_screen: 'true'
   
