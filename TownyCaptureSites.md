@@ -4,7 +4,7 @@ TownyCaptureSites is a plugin created by LlmDl, which converts Towny Towns into 
 
 #### Installation
 CaptureSites is installed easily:
-- Make sure you have a Towny installed which is at least version 0.98.6.0.
+- Make sure you have a Towny installed which is at least version 0.99.0.6
 - Add the TownyCaptureSites.jar file to your plugin folder and start your server.
 - Run `/ta capturesites installperms` in game to give the permission nodes.
     - By default all town members will be able to use `/t defend` which teleports them to CaptureSites with active battles.
