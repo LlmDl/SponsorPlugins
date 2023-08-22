@@ -129,6 +129,8 @@ towny.command.town.defend - used for /t defend.
 
 towny.command.town.collectrewards - used for /t collectrewards.
 
+townycapturesites.allowed_to_battle - used when require_battle_permission_node is set to true in the config, allowing the player who have this node to attack CaptureSite HP, as well as count towards the balancing feature.
+
 #### PAPI Placeholders
 
 `%townycapturesites_next_capture_site_time_remaining%` - Displays how much time is left before the next available capturesite can be captured.
