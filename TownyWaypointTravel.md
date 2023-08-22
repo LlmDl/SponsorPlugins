@@ -26,6 +26,12 @@ prevent:
   
   # When true, a player is always allowed to visit their nation's capital using /t spawn or /n spawn.
   spawning_allowed_to_nation_capital: `false`
+
+towns:
+  
+  # A list of town names that players will be allowed to spawn to by default.
+  # If you want to have a server city accessible to all from the start, this is where you would put that town name.
+  default_towns: ''
   
 lang:
   you_cannot_spawn: You have not visited %s yet, you cannot fast travel to this location.
