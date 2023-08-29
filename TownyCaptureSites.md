@@ -2,9 +2,11 @@
 
 TownyCaptureSites is a plugin created by LlmDl, which converts Towny Towns into CaptureSites, which then act as Capturable locations that Towns can take control of, gaining money or items as a reward.
 
+TownyCaptureSites runs on Spigot, Paper and Folia servers.
+
 #### Installation
 CaptureSites is installed easily:
-- Make sure you have a Towny installed which is at least version 0.99.0.6
+- Make sure you have a Towny installed which is at least version 0.99.5.0.
 - Add the TownyCaptureSites.jar file to your plugin folder and start your server.
 - Run `/ta capturesites installperms` in game to give the permission nodes.
     - By default all town members will be able to use `/t defend` which teleports them to CaptureSites with active battles.
@@ -23,7 +25,7 @@ CaptureSites is installed easily:
 
 #### CaptureSite Creation
 CaptureSites are created by admins using the following steps:
-- While at a location you like use `/ta town new NAME npc`, in order to make a town. You can add plots to your town using `/ta set plot TOWNNAME`. Alternatively you can create the town like normal and not use any admin commands until the end when you run `/ta set mayor NAME npc`.
+- While at a location you like use `/ta town new NAME npc`, in order to make a town. You can add plots to your town using `/ta plot set NAME`. Alternatively you can create the town like normal and not use any admin commands until the end when you run `/ta set mayor NAME npc`.
 
 - CaptureSites have an HP stat which must be attacked, this HP is only dropped in the Town/CaptureSite's homeblock, so make sure you have set your homeblock where you want, you can use `/t set homeblock` to move a homeblock that isn't where you want it. If you want to make the HP stat affected by players site-wide use the `/ta capturesite togglehomeblock` command now.
 
@@ -32,7 +34,6 @@ CaptureSites are created by admins using the following steps:
 - When you have everything set you will use `/ta capturesite addsite`. If you wish to have CaptureSites revert back after battles use `/ta capturesite makesnapshot`.
 
 - You are done, this CaptureSite can be taken over using `/t capture`.
-
 
 #### CaptureSite Battles
 CaptureBattles are started when a Town member with the `towny.command.town.capture` permission node uses `/t capture` while standing within a CaptureSite, and that CaptureSite has a defender.
@@ -90,6 +91,15 @@ Their colouring will also be affected:
   - The fill colour is replaced with a hex colour set in the config.
   - The border colour will be replaced by the colour in the config, or if there is a controlling town, it will use the town's colour.
 
+#### Discord Integration
+If you have enabled and set up the Discord webhook url in the config.yml, TownyCaptureSites will broadcast the following things to your Discord:
+  - CaptureSites being taken over with no contest.
+  - CaptureSites battles beginning.
+  - CaptureSites battles being won by the attackers.
+  - CaptureSites battles being defended by the defenders.
+
+The colour of the embed will use the CaptureSites's town colour.
+
 #### Commands
 ```
 /t [SiteName] - Shows a StatusScreen with useful information on the CaptureSite.
@@ -129,7 +139,7 @@ towny.command.town.defend - used for /t defend.
 
 towny.command.town.collectrewards - used for /t collectrewards.
 
-townycapturesites.allowed_to_battle - used when require_battle_permission_node is set to true in the config, allowing the player who have this node to attack CaptureSite HP, as well as count towards the balancing feature.
+townycapturesites.allowed_to_battle - used to restrict who is able to participate in battles, only used when capturessites.require_battle_permission_node is set to true in the config.
 
 #### PAPI Placeholders
 
@@ -142,6 +152,8 @@ townycapturesites.allowed_to_battle - used when require_battle_permission_node i
 `%townycapturesites_capture_site_time_remaining_SITENAMEHERE%` - Displays the amount of time remaining on the specified CaptureSite's after-battle cooldown.
 
 #### Events
+
+CaptureSiteCapturedNoContestEvent - thrown when a CaptureSite is taken over with no battle (no defender.)
 
 CaptureSiteCapturedEvent - thrown when a CaptureSite is taken by an attacker.
 
