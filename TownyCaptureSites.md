@@ -29,9 +29,11 @@ CaptureSites are created by admins using the following steps:
 
 - CaptureSites have an HP stat which must be attacked, this HP is only dropped in the Town/CaptureSite's homeblock, so make sure you have set your homeblock where you want, you can use `/t set homeblock` to move a homeblock that isn't where you want it. If you want to make the HP stat affected by players site-wide use the `/ta capturesite togglehomeblock` command now.
 
+- When you have everything set you will use `/ta capturesite addsite`. If you wish to have CaptureSites revert back after battles use `/ta capturesite makesnapshot`.
+
 - CaptureSites default to awarding money to the controlling town. This can be changed to Item-based rewards using `/ta capturesite gui` then selecting the "Set Reward Type" icon, and then the "Set Items Reward" icon.
 
-- When you have everything set you will use `/ta capturesite addsite`. If you wish to have CaptureSites revert back after battles use `/ta capturesite makesnapshot`.
+- Most of the settings for a CaptureSite can be found in the `/ta capturesite gui` GUI. If you have a money reward enabled then you must use the command `/ta capturesite rewardmoney {amount}` to set the reward amount.
 
 - You are done, this CaptureSite can be taken over using `/t capture`.
 
