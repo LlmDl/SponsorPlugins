@@ -19,8 +19,9 @@ Get all of the following for as little as $4 per month:
 - #### [TownyHistories](TownyHistories.md)
 - #### [TownOptionalLWC](TownOptionalLWC.md)
 - #### [TownyCaptureSites](TownyCaptureSites.md) ($4/month Limited Time Only)
+- #### [TowerOfBabel](TowerOfBabel.md)
 
-That's 8 additional plugins to go with all of [the other TownyAdvanced plugins](https://github.com/orgs/TownyAdvanced/repositories) you already get for free!
+That's 9 additional plugins to go with all of [the other TownyAdvanced plugins](https://github.com/orgs/TownyAdvanced/repositories) you already get for free!
 
 ### FAQ
 
