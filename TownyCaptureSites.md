@@ -129,6 +129,9 @@ The colour of the embed will use the CaptureSites's town colour.
     removedefender - Removes the defending town on a CaptureSite at your location.
     togglehomeblock - Toggles whether the CaptureSite HP is affected only in the homeblock, or site-wide.
     removesite - Removes a CaptureSite at your location.
+    setmaxdistance - Sets how far away a town's homeblock can be before a town cannot capture a site.
+    setmaxheight - Sets the height at which attackers must be at or below, in order to affect CaptureSite HP.
+    setminheight - Sets the height at which attackers must be at or above, in order to affect CaptureSite HP.
   
 /ta reload townycapturesites - reloads the lang file, config file and database.
 ```
