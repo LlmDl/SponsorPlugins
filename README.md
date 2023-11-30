@@ -35,6 +35,3 @@ That's 9 additional plugins to go with all of [the other TownyAdvanced plugins](
 
 **A:** Yes, one-time sponsors get 1 month of access to the Sponsor plugins.
 
----
-
-<a href=https://dedimc.promo/towny>![Spigot_Banner_Towny](https://github.com/TownyAdvanced/Towny/assets/879756/559c8340-82e5-41fc-a10c-af0dcf47f38f)</a>
