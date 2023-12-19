@@ -156,6 +156,14 @@ townycapturesites.allowed_to_battle - used to restrict who is able to participat
 
 `%townycapturesites_capture_site_time_remaining_SITENAMEHERE%` - Displays the amount of time remaining on the specified CaptureSite's after-battle cooldown.
 
+`%townycapturesites_capture_site_defender_name_SITENAMEHERE%` - Displays the name of the Town which holds a CaptureSite, or None.
+
+`%townycapturesites_capture_site_can_be_captured_SITENAMEHERE%` - Displays true/false based on whether a CaptureSite can be attacked.
+
+`%townycapturesites_capture_site_time_held_SITENAMEHERE%` - Displays the length of time the CaptureSite has been held for.
+
+`%townycapturesites_capture_site_reward_SITENAMEHERE%` - Displays the reward given for controlling the CaptureSite.
+
 #### Events
 
 CaptureSiteCapturedNoContestEvent - thrown when a CaptureSite is taken over with no battle (no defender.)
