@@ -28,7 +28,9 @@ TownyRTP also fires it's own TownyRTPEvent if you want to specifically target RT
 /town rtp -ignore - teleport without a cost warning.
 /town rtp -autojoin - auto join the town while you teleport to it.
 /town rtp -neutral - limits the towns to only neutral towns.
+/town rtp [townname] {-ignore} {-autojoin} -  teleport someone to a random plot in a specific town, with optional args.
 /town rtp [playername] {-ignore} {-autojoin} - for admin, to teleport someone to a random plot, with optional args.
+
 ```
 
 ### API Events
