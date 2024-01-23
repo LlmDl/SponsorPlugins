@@ -21,7 +21,7 @@ CaptureSites is installed easily:
 - (Optional) Install [Dynmap](https://dev.bukkit.org/projects/dynmap) and [Dynmap-Towny](https://github.com/TownyAdvanced/Dynmap-Towny/releases) in order highlight CaptureSite locations on the Dynmap plugin map.
 - (Optional) Install [MapTowny](https://github.com/TownyAdvanced/MapTowny) and any of the [supported mappers](https://github.com/TownyAdvanced/MapTowny#dependencies) in order highlight CaptureSite locations on your server mapper.
 - (Optional) Install [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) in order to use the Placeholders listed below.
-- (Optional) Install [Slimefun](https://github.com/Slimefun/Slimefun4), [MMOItems](https://www.spigotmc.org/resources/mmoitems-premium.39267/) or [MythicMobs](https://www.spigotmc.org/resources/%E2%9A%94-mythicmobs-free-version-%E2%96%BAthe-1-custom-mob-creator%E2%97%84.5702/) to use their custom Items as rewards for CaptureSites.
+- (Optional) Install [Slimefun](https://github.com/Slimefun/Slimefun4), [MMOItems](https://www.spigotmc.org/resources/mmoitems-premium.39267/), [MythicMobs](https://www.spigotmc.org/resources/5702/) or [ItemsAdder](https://www.spigotmc.org/resources/73355/) to use their custom Items as rewards for CaptureSites.
 
 #### CaptureSite Creation
 CaptureSites are created by admins using the following steps:
@@ -80,7 +80,7 @@ By default CaptureSites will reward towns with money. But on a per-Site basis yo
 
 Item-based rewards are enabled via the `/ta capturesite gui` command while stood in a CaptureSite. After setting the Reward Type to Fixed/Random Item you can select the "Set Reward Type" icon and fill the inventory with the items you want to give. Click "Save" and your CaptureSite will give either the Fixed or Random Rewards.
 
-The items given as rewards can be Minecraft items, or if you have them installed, custom items from the following plugins: [Slimefun](https://github.com/Slimefun/Slimefun4), [MMOItems](https://www.spigotmc.org/resources/mmoitems-premium.39267/) or [MythicMobs](https://www.spigotmc.org/resources/%E2%9A%94-mythicmobs-free-version-%E2%96%BAthe-1-custom-mob-creator%E2%97%84.5702/).
+The items given as rewards can be Minecraft items, or if you have them installed, custom items from the following plugins: [Slimefun](https://github.com/Slimefun/Slimefun4), [MMOItems](https://www.spigotmc.org/resources/mmoitems-premium.39267/), [MythicMobs](https://www.spigotmc.org/resources/5702/) or [ItemsAdder](https://www.spigotmc.org/resources/73355/).
 
 You can switch back to Money rewards using the same `/ta capturesite gui` -> "Set Reward Type" option. The amount given is set in the config and is the same for every CaptureSite.
 
