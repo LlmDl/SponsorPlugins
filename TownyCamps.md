@@ -33,16 +33,16 @@ Camps have an optional (via the config,) cooldown setting, preventing players fr
 
 Camps have an optional (via the config,) CombatLogX support.
 
+
 ### Permission Nodes:
 - `townycamps.campfire`
 
 
 ### Config Nodes:
 ```
-
 version:
   # This is the current version.  Please do not edit.
-  version: 0.0.39
+  version: 0.0.46
 # The language file you wish to use.
 # Available: en-US.yml, zh-CN.yml
 # You can add your own localization using the correct locale filename and placing
@@ -59,15 +59,15 @@ camps:
   
   # How long a camp can exist for, before being deleted.
   # Set to -1 to have camps last forever.
-  duration: 48h
+  duration: 24h
   
   # How long after making a camp does a player have to wait to make a new one.
   # Set to 0h, to use no cooldown.
   creation_cooldown: 0h
-
+  
   # When set above zero, this is determine the amount of money required to claim a camp.
-  creation_cost: 0.0
-
+  creation_cost: '0.0'
+  
   # Should the camp location be shown on the /resident status screen page.
   show_location_on_status_screen: 'true'
   
@@ -77,7 +77,7 @@ camps:
   
   # Overrides Towny's min_plot_distance_from_town_plot setting when checking for camp proximity to other towns.
   # Set to -1 to use the value of min_plot_distance_from_town_plot.
-  min_plot_distance_camp_override: '-1'
+  min_plot_distance_camp_override: '1'
   
   
   protections:
@@ -92,11 +92,25 @@ camps:
     disable_explosion: 'true'
   
   
+  home_setting:
+  
+    # When enabled, player that have the specified permission node to use /set home, will be prompted to set their home via a Confirmation,
+    # when they create their Camps.
+    enabled: 'true'
+  
+    # This permission node will be tested for when a player creates a camp and home_setting has been enabled.
+    # If the player has this node they will receive a confirmation, which will cause the player to run /sethome, if they accept.
+    permission_node: essentials.sethome
+  
+  
 third_party:
   dynmap:
   
     # When set to true, and dynmap is found on the server, Camps will appear on the dynmap.
     enable_dynmap_support: 'false'
+  
+    # Which layer should the Camps appear on in your web browser?
+    dynmap_layer_name: TownyCamps
   combatlogx:
   
     # When set to true, and CombatLogX is enabled on the server, players will be unable to create camps while in combat.
