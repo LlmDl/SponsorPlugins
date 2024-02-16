@@ -34,6 +34,10 @@ Players can chat in their own language by speaking. If they want to chat in othe
 - Players can also specify a language to speak into using the chat like so:
   - 'Some Words Here -elvish' <- This will display 'Some Words Here' in Elvish.
 
+> Tip:
+> 
+> If you would like to use the above admin commands in a Command Block, so you can use the @p selector, get the [CommandHook plugin](https://www.spigotmc.org/resources/commandhook.61415/).
+
 ### Permissions:
 
 - `towerofbabel.hear_clearly` - Defaults to OPs, players can understand every language clearly.
