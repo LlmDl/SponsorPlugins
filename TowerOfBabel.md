@@ -30,6 +30,7 @@ Players can chat in their own language by speaking. If they want to chat in othe
 - /language [languagename] - Sets the language a player speaks in by default.
 - /language [playername] setrace [racename] - Sets the player's race, all fluencies are set to the race default. (Admins only.)
 - /language [playername] add [languagename] [-|+amount] - Adds or decreases a player's fluency in a language. (Admins only.)
+- /language [playername] set [languagename] [amount] - Sets a player's fluency to the amount specified. (Admins only.)
 ```
 - Players can also specify a language to speak into using the chat like so:
   - 'Some Words Here -elvish' <- This will display 'Some Words Here' in Elvish.
