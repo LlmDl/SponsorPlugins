@@ -16,6 +16,8 @@ Players can chat in their own language by speaking. If they want to chat in othe
 - use `/language [languagename]` or,
 - append their chat with -[languagename] which will allow them to speak in a language without altering their default language.
 
+Optionally, players can learn a language (up to a configurable limit,) just by listening to nearby players speak. The distance and chance of an increase in fluency is also configurable.
+
 
 ### Setup:
 
@@ -111,10 +113,26 @@ settings:
   # Supports up to 3 decimal places, allowing as low as 0.001.
   fluency_increase_amount: '0.01'
   
+  
+  listening_fluency:
+  
+    # When enabled, players who listen to a language will have a chance of their fluency increasing, while they are physically close to the player.
+    enabled: 'true'
+  
+    # The distance in blocks that a player must be from a speaker, to have a chance of their fluency increasing in the spoken language.
+    distance: '15'
+  
+    # The chance that a player listening to a language will increase their fluency. Supports up to 3 decimal places, allowing as low as 0.001.
+    fluency_increase_chance: '0.01'
+  
+    # The maximum fluency a player can gain from listening to other speaking nearby.
+    max_fluency_possible: '0.75'
+  
   # The symbols that will not get filtered.
   unfiltered_punctuation: ',./?:;[]<>|\~`!@#$%^&*()_-+=''"'
   
   # When set to true, the player's name will use the DisplayName, a name which is commonly modified
   #  by other plugins which add prefixes. It is known as {modplayername} in TownyChat.
   use_displayname: 'false'
+
 ```
