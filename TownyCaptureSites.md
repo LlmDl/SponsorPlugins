@@ -21,7 +21,7 @@ CaptureSites is installed easily:
 - (Optional) Install [Dynmap](https://dev.bukkit.org/projects/dynmap) and [Dynmap-Towny](https://github.com/TownyAdvanced/Dynmap-Towny/releases) in order highlight CaptureSite locations on the Dynmap plugin map.
 - (Optional) Install [MapTowny](https://github.com/TownyAdvanced/MapTowny) and any of the [supported mappers](https://github.com/TownyAdvanced/MapTowny#dependencies) in order highlight CaptureSite locations on your server mapper.
 - (Optional) Install [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) in order to use the Placeholders listed below.
-- (Optional) Install [Slimefun](https://github.com/Slimefun/Slimefun4), [MMOItems](https://www.spigotmc.org/resources/mmoitems-premium.39267/), [MythicMobs](https://www.spigotmc.org/resources/5702/) or [ItemsAdder](https://www.spigotmc.org/resources/73355/) to use their custom Items as rewards for CaptureSites.
+- (Optional) Install [Slimefun](https://github.com/Slimefun/Slimefun4), [MMOItems](https://www.spigotmc.org/resources/mmoitems-premium.39267/), [MythicMobs](https://www.spigotmc.org/resources/5702/), [ItemsAdder](https://www.spigotmc.org/resources/73355/) or [Oraxen](https://www.spigotmc.org/resources/72448/) to use their custom Items as rewards for CaptureSites.
 
 #### CaptureSite Creation
 CaptureSites are created by admins using the following steps:
