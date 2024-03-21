@@ -126,6 +126,7 @@ The colour of the embed will use the CaptureSites's town colour.
     regenerate - Uses the snapshot to regenerate a CaptureSite at your location.
     rewardmoney {amount} - Used to set how much money is awarded on a per-site basis.
     removecooldown - Removes the after-battle cooldown on a CaptureSite at your location.
+    removealldefenders - Stops any active battles and removes the defenders, in all CaptureSites on the server.
     removedefender - Removes the defending town on a CaptureSite at your location.
     togglehomeblock - Toggles whether the CaptureSite HP is affected only in the homeblock, or site-wide.
     removesite - Removes a CaptureSite at your location.
