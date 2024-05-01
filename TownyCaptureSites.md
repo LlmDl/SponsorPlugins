@@ -8,7 +8,7 @@ TownyCaptureSites runs on Spigot, Paper and Folia servers.
 CaptureSites is installed easily:
 - Make sure you have a Towny installed which is at least version 0.99.5.0.
 - Add the TownyCaptureSites.jar file to your plugin folder and start your server.
-- Run `/ta capturesite installperms` in game to give the permission nodes.
+- Run `/ta capturesites installperms` in game to give the permission nodes.
     - By default all town members will be able to use `/t defend` which teleports them to CaptureSites with active battles.
     - Mayors, Assistants and Sheriffs will also receive the node for using `/t capture` to initiate CaptureSites battles.
     - Mayors will be given the node for using `/t collectrewards`, to collect any item rewards.
@@ -25,7 +25,7 @@ CaptureSites is installed easily:
 
 #### CaptureSite Creation
 CaptureSites are created by admins using the following steps:
-- While at a location you like use `/ta town new NAME npc`, in order to make a town. You can add plots to your town using `/ta set plot NAME`. Alternatively you can create the town like normal and not use any admin commands until the end when you run `/ta set mayor NAME npc`.
+- While at a location you like use `/ta town new NAME npc`, in order to make a town. You can add plots to your town using `/ta plot set NAME`. Alternatively you can create the town like normal and not use any admin commands until the end when you run `/ta set mayor NAME npc`.
 
 - CaptureSites have an HP stat which must be attacked, this HP is only dropped in the Town/CaptureSite's homeblock, so make sure you have set your homeblock where you want, you can use `/t set homeblock` to move a homeblock that isn't where you want it. If you want to make the HP stat affected by players site-wide use the `/ta capturesite togglehomeblock` command now.
 
@@ -56,6 +56,8 @@ If the HP stat goes down to 0, the attackers win. If the timer runs out, the def
 
 When a battle ends, there is a configurable cooldown placed on the CaptureSite.
 
+CaptureSites can have explosions enabled in them during Battles, this is configured per-site using the `/ta capturesite gui` command.
+
 If a snapshot was made of the CaptureSite, it will start to regenerate back to the original state.
 
 #### CaptureSites
@@ -82,9 +84,11 @@ Item-based rewards are enabled via the `/ta capturesite gui` command while stood
 
 The items given as rewards can be Minecraft items, or if you have them installed, custom items from the following plugins: [Slimefun](https://github.com/Slimefun/Slimefun4), [MMOItems](https://www.spigotmc.org/resources/mmoitems-premium.39267/), [MythicMobs](https://www.spigotmc.org/resources/5702/) or [ItemsAdder](https://www.spigotmc.org/resources/73355/).
 
-You can switch back to Money rewards using the same `/ta capturesite gui` -> "Set Reward Type" option. The amount given is set in the config and is the same for every CaptureSite.
+You can switch back to Money rewards using the same `/ta capturesite gui` -> "Set Reward Type" option. The amount of money which is rewarded is set using `/ta capturesite rewardmoney {amount}`, by default money rewards start with what is set in the config.
 
-The amount of money which is rewarded is set using `/ta capturesite rewardmoney {amount}`, by default money rewards start with what is set in the config.
+Money rewards have two options:
+  - Fixed amount - This is paid to the town.
+  - Shared amount - This divides the reward money between all of the online players of the town which are allowed to take part in battles. If no one is eligible it is paid to the town instead. 
 
 #### Dynmap-Towny / MapTowny Integration
 If you have [Dynmap-Towny](https://github.com/TownyAdvanced/Dynmap-Towny/releases) or [MapTowny](https://github.com/TownyAdvanced/MapTowny) installed then the Towns which have been converted to CaptureSites will appear with altered InfoWindows when clicked upon.
@@ -126,7 +130,6 @@ The colour of the embed will use the CaptureSites's town colour.
     regenerate - Uses the snapshot to regenerate a CaptureSite at your location.
     rewardmoney {amount} - Used to set how much money is awarded on a per-site basis.
     removecooldown - Removes the after-battle cooldown on a CaptureSite at your location.
-    removealldefenders - Stops any active battles and removes the defenders, in all CaptureSites on the server.
     removedefender - Removes the defending town on a CaptureSite at your location.
     togglehomeblock - Toggles whether the CaptureSite HP is affected only in the homeblock, or site-wide.
     removesite - Removes a CaptureSite at your location.
