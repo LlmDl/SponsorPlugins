@@ -124,6 +124,9 @@ third_party:
 
 ### PAPI placeholders
 - %townycamps_has_camp% - Displays [hasacamp] if the player has a camp but is configurable.
+- %townycamps_camp_time_remaining% - Displays how much time is remaining on a camp when they do not last forever.
+- %townycamps_has_camp_or_town% - Returns true if the player has a camp or a town, otherwise returns false.
+- %townycamps_coordinates% - Displays the worldname and X and Z coordinates of a camp location.
 
 ### API Events:
 - `NewCampEvent` - a cancellable event when a camp is created.
