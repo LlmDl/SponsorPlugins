@@ -177,3 +177,9 @@ CaptureSiteCapturedEvent - thrown when a CaptureSite is taken by an attacker.
 CaptureSiteDefendedEvent - thrown when a CaptureSite is defended against.
 
 CaptureSiteCaptureCommandEvent - a cancellable event which is thrown when /t capture is used.
+
+CaptureSiteRewardTownEvent - thrown when rewards are doled out, allowing you to modify which Town is going to receive the CaptureSite's reward.
+
+CaptureSiteOwnerDisplayNameEvent - thrown when a CaptureSite displays their owning town, allowing a plugin to modify the name which is displayed.
+
+CaptureSiteRewardDisplayEvent - thrown when a CaptureSite displays their rewards, allowing a plugin to modify the rewards which are displayed.
