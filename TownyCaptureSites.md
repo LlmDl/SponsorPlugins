@@ -6,7 +6,7 @@ TownyCaptureSites runs on Spigot, Paper and Folia servers.
 
 #### Installation
 CaptureSites is installed easily:
-- Make sure you have a Towny installed which is at least version 0.99.5.0.
+- Make sure you have a Towny installed which is at least version 0.101.1.0.
 - Add the TownyCaptureSites.jar file to your plugin folder and start your server.
 - Run `/ta capturesites installperms` in game to give the permission nodes.
     - By default all town members will be able to use `/t defend` which teleports them to CaptureSites with active battles.
@@ -161,6 +161,8 @@ townycapturesites.allowed_to_battle - used to restrict who is able to participat
 `%townycapturesites_capture_site_time_remaining_SITENAMEHERE%` - Displays the amount of time remaining on the specified CaptureSite's after-battle cooldown.
 
 `%townycapturesites_capture_site_defender_name_SITENAMEHERE%` - Displays the name of the Town which holds a CaptureSite, or None.
+
+`%townycapturesites_capture_site_attacker_name_SITENAME%` - Shows you the name of the Town which is currently attacking a CaptureSite, or None.
 
 `%townycapturesites_capture_site_can_be_captured_SITENAMEHERE%` - Displays true/false based on whether a CaptureSite can be attacked.
 
