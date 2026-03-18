@@ -45,6 +45,13 @@ Optionally, players can learn a language (up to a configurable limit,) just by l
 
 - `towerofbabel.hear_clearly` - Defaults to OPs, players can understand every language clearly.
 - `towerofbabel.admin` - Defaults to OPs, these players can use `/language [playername]` commands.
+- Race Permissions:
+  - All races will now have a permission node attached to them, this allows you to:
+    - Check if they are part of a race using a permission node test.
+    - Attach child nodes to races, making races able to do different things.
+  - New configs will generate the racePermissionNode setting for each race.
+  - Old configs will not but races will be auto-assigned a node using the towerofbabel.race.RACENAME, where the RACENAME is the lower-cased name value of the race set in the config.
+  - Players should be assigned their permission node when they log in, and when their race is changed.
 
 ### API:
 TowerOfBabel contains an TowerOfBabelAPI class, accessible via TowerOfBabel.getPlugin().getAPI();
@@ -84,18 +91,22 @@ races:
     name: Human
     primaryLanguage: Common
     fluencies: Common-1.0,Elvish-0.5,Orcish-0.1
+    permissionNode: towerofbabel.race.human
   elf:
     name: Elf
     primaryLanguage: Elvish
     fluencies: Common-1.0,Elvish-1.0,Orcish-0.25
+    permissionNode: towerofbabel.race.elf
   woodelf:
     name: WoodElf
     primaryLanguage: Elvish
     fluencies: Common-1.0,Elvish-1.0,Orcish-0.15
+    permissionNode: towerofbabel.race.woodelf
   orc:
     name: Orc
     primaryLanguage: Orcish
     fluencies: Common-0.5,Elvish-0.1,Orcish-1.0
+    permissionNode: towerofbabel.race.orc
   
 settings:
   
