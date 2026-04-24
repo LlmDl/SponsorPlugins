@@ -6,7 +6,7 @@ TownyCaptureSites runs on Spigot, Paper and Folia servers.
 
 #### Installation
 CaptureSites is installed easily:
-- Make sure you have a Towny installed which is at least version 0.101.1.0.
+- Make sure you have a Towny installed which is at least version 0.102.0.0.
 - Add the TownyCaptureSites.jar file to your plugin folder and start your server.
 - Run `/ta capturesites installperms` in game to give the permission nodes.
     - By default all town members will be able to use `/t defend` which teleports them to CaptureSites with active battles.
@@ -76,7 +76,16 @@ CaptureSites can have a required minimum and maximum TownLevel. By default they 
 After a Town captures a CaptureSite (either via a battle, or no-contest,) there is a configurable cooldown before the CaptureSite can be captured again. When a cooldown ends there is a global announcement.
 
 #### CaptureSites Rewards
-By default CaptureSites will reward towns with money. But on a per-Site basis you can alternatively set two types of item-based rewards:
+
+CaptureSites can have 5 different types of rewards, configured on a per-site basis. By default CaptureSites will use the Fixed Money option. You can switch between reward types by standing in the CaptureSite you want to modify and using the same `/ta capturesite gui` -> "Set Reward Type" option.
+
+Money rewards have two options:
+  - Fixed amount - This is paid to the town.
+  - Shared amount - This divides the reward money between all of the online players of the town which are allowed to take part in battles. If no one is eligible it is paid to the town instead. 
+
+The amount of money which is rewarded is set using `/ta capturesite rewardmoney {amount}`, by default money rewards start with what is set in the config.
+
+Item rewards have two options: 
   - Fixed Item(s) - This gives a list of items (which can be just one item,) to the defending town, every hour.
   - Random Item - This gives one item from a list to the defending town, every hour.
 
@@ -84,11 +93,12 @@ Item-based rewards are enabled via the `/ta capturesite gui` command while stood
 
 The items given as rewards can be Minecraft items, or if you have them installed, custom items from the following plugins: [Slimefun](https://github.com/Slimefun/Slimefun4), [MMOItems](https://www.spigotmc.org/resources/mmoitems-premium.39267/), [MythicMobs](https://www.spigotmc.org/resources/5702/) or [ItemsAdder](https://www.spigotmc.org/resources/73355/).
 
-You can switch back to Money rewards using the same `/ta capturesite gui` -> "Set Reward Type" option. The amount of money which is rewarded is set using `/ta capturesite rewardmoney {amount}`, by default money rewards start with what is set in the config.
+Command rewards have one option:
+  - This command can be set up, one command per CaptureSite.
 
-Money rewards have two options:
-  - Fixed amount - This is paid to the town.
-  - Shared amount - This divides the reward money between all of the online players of the town which are allowed to take part in battles. If no one is eligible it is paid to the town instead. 
+Commands are collected in the town's status screen in the CaptureSite Command Rewards component. When the component is clicked on, players with the `towny.command.town.collectrewards` permission node can click to execute the commands one at a time. Commands can be configured using <player> to be replaced with the clicking player's name, and <town> to be replaced with the clicking player's town name.
+
+This is an incredibly powerful reward type! Any server or plugin command can be used here, be careful not to set up a CaptureSite with the command `op <player>`!
 
 #### Dynmap-Towny / MapTowny Integration
 If you have [Dynmap-Towny](https://github.com/TownyAdvanced/Dynmap-Towny/releases) or [MapTowny](https://github.com/TownyAdvanced/MapTowny) installed then the Towns which have been converted to CaptureSites will appear with altered InfoWindows when clicked upon.
@@ -113,7 +123,9 @@ The colour of the embed will use the CaptureSites's town colour.
 /t capture - Used to capture a CaptureSite. If there is no defender, it is taken over without a battle.
              If the CaptureSite is already controlled a CaptureBattle begins.
 
-/t collectrewards - Used to collect item rewards.
+/t collectitemsrewards - Used to collect item rewards.
+
+/t collectcommandsrewards - Used to collect command rewards.
 
 /t defend - Teleports a member of a CaptureSites defending-town to a CaptureSite with an active battle.
 
@@ -133,6 +145,7 @@ The colour of the embed will use the CaptureSites's town colour.
     removedefender - Removes the defending town on a CaptureSite at your location.
     togglehomeblock - Toggles whether the CaptureSite HP is affected only in the homeblock, or site-wide.
     removesite - Removes a CaptureSite at your location.
+    setcommandreward - Prompts you to set the command reward for a CaptureSite.
     setcooldown {amount or clear} - Sets a custom cooldown duration for the CaptureSite using the 1h, 30m, 1d time format.
     setmaxdistance {amount or clear} - Sets how far away a town's homeblock can be before a town cannot capture a site.
     setmaxheight {amount} - Sets the height at which attackers must be at or below, in order to affect CaptureSite HP.
@@ -143,13 +156,13 @@ The colour of the embed will use the CaptureSites's town colour.
 
 #### Permissions
 
-towny.command.town.capture - used for /t capture.
+`towny.command.town.capture` - used for `/t capture`.
 
-towny.command.town.defend - used for /t defend.
+`towny.command.town.defend` - used for `/t defend`.
 
-towny.command.town.collectrewards - used for /t collectrewards.
+`towny.command.town.collectrewards` - used for `/t collectitemsrewards` and `/t collectcommandsrewards`.
 
-townycapturesites.allowed_to_battle - used to restrict who is able to participate in battles, only used when capturessites.require_battle_permission_node is set to true in the config.
+`townycapturesites.allowed_to_battle` - used to restrict who is able to participate in battles, only used when capturessites.require_battle_permission_node is set to true in the config.
 
 #### PAPI Placeholders
 
