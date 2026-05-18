@@ -96,7 +96,9 @@ The items given as rewards can be Minecraft items, or if you have them installed
 Command rewards have one option:
   - This command can be set up, one command per CaptureSite.
 
-Commands are collected in the town's status screen in the CaptureSite Command Rewards component. When the component is clicked on, players with the `towny.command.town.collectrewards` permission node can click to execute the commands one at a time. Commands can be configured using <player> to be replaced with the clicking player's name, and <town> to be replaced with the clicking player's town name.
+Commands are collected in the town's status screen in the CaptureSite Command Rewards component. When the component is clicked on, players with the `towny.command.town.collectrewards` permission node can click to execute the commands one at a time. 
+
+Commands can be configured using <player> to be replaced with the clicking player's name, and <town> to be replaced with the clicking player's town name. Alternatively you can use <onlinemembers> to run the command on every currently online player in the town, where <onlinemembers> will be replaced with the player's name.
 
 This is an incredibly powerful reward type! Any server or plugin command can be used here, be careful not to set up a CaptureSite with the command `op <player>`!
 
