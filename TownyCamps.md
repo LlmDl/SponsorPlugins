@@ -44,7 +44,7 @@ Camps have an optional (via the config,) CombatLogX support.
 ```
 version:
   # This is the current version.  Please do not edit.
-  version: 0.0.46
+  version: 0.0.54
 # The language file you wish to use.
 # Available: en-US.yml, zh-CN.yml
 # You can add your own localization using the correct locale filename and placing
@@ -61,7 +61,7 @@ camps:
   
   # How long a camp can exist for, before being deleted.
   # Set to -1 to have camps last forever.
-  duration: 24h
+  duration: 48h
   
   # How long after making a camp does a player have to wait to make a new one.
   # Set to 0h, to use no cooldown.
@@ -77,9 +77,12 @@ camps:
   # instead of the Towny chunk coordinates. Set true to use minecraft coords, false to use Towny coords.
   show_location_as_minecraft_coords: 'false'
   
+  # When true, little fire particles will mark the border of the camps while a player is stood in it.
+  show_border_particles: 'true'
+  
   # Overrides Towny's min_plot_distance_from_town_plot setting when checking for camp proximity to other towns.
   # Set to -1 to use the value of min_plot_distance_from_town_plot.
-  min_plot_distance_camp_override: '1'
+  min_plot_distance_camp_override: '-1'
   
   
   protections:
@@ -98,18 +101,21 @@ camps:
   
     # When enabled, player that have the specified permission node to use /set home, will be prompted to set their home via a Confirmation,
     # when they create their Camps.
-    enabled: 'true'
+    enabled: 'false'
   
     # This permission node will be tested for when a player creates a camp and home_setting has been enabled.
     # If the player has this node they will receive a confirmation, which will cause the player to run /sethome, if they accept.
     permission_node: essentials.sethome
+  
+    # This is the command that players will run when they create a camp, and home setting is enabled, and they have the above permission node.
+    command: sethome
   
   
 third_party:
   dynmap:
   
     # When set to true, and dynmap is found on the server, Camps will appear on the dynmap.
-    enable_dynmap_support: 'false'
+    enable_dynmap_support: 'true'
   
     # Which layer should the Camps appear on in your web browser?
     dynmap_layer_name: TownyCamps
@@ -117,11 +123,20 @@ third_party:
   
     # When set to true, and CombatLogX is enabled on the server, players will be unable to create camps while in combat.
     enable_combatlogx_support: 'false'
+  townyprovinces:
+  
+    # When false players will not be able to make camps in Wasteland provinces.
+    allow_camps_in_wasteland: 'false'
+  
+    # When false players will not be able to make camps in Ocean provinces.
+    allow_camps_in_oceans: 'false'
+  
+    # When false players will not be able to make camps in provinces that have been claimed already.
+    allow_camps_in_claimed_provinces: 'false'
   papi:
   
     # The format for the %townycamps_has_camp% placeholder.
     has_camp_placeholder: '[hasacamp]'
-
 ```
 
 ### PAPI placeholders
