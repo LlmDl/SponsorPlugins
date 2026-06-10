@@ -12,6 +12,8 @@ Camps are protected from Build/Destroy/Switch/Itemuse. Camp owners can allow the
 
 PVP, Explosion and Burning actions are optionally protected (via the config.)
 
+Camps are protected from monsters as long as the player's mobs setting (`/res toggle mobs`) is set to false, and the world does not force town mobs on.
+
 Chunk Notifications are shown when players enter and exit Camps.
 
 Camp-owners can use LWCx in their camp. LWCx protections are removed when a camp is removed.
