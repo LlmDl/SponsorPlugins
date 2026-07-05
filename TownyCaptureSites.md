@@ -46,6 +46,8 @@ Battles last a configurable length of time or until the CaptureSite runs out of 
 
 If it is enabled in the config file, CaptureSites can have a dynamic HP setting, determined by how many attacking players are online vs defending players. If the attackers outweigh the defenders, the Site will have a higher HP and vice versa. It is also an option for the HP to rebalance as attacking and defending players log on and off during active CaptureSite Battles.
 
+Alternatively, each CaptureSite can have a max team size set or not set. If it is set, attackers and defenders above the team limit cannot be involved in the battle. If they are above their limit, any team's player entering the CaptureSite will be teleported away if they become involved in PVP. They will not count towards affecting the CaptureSite HP.
+
 When a Battle starts, all members of the defending and attacking towns will receive two boss bars, one showing the remaining time, and one showing the CaptureSite HP.
 
 The CaptureSite's backing Town will have the AdminEnabledPVP setting flipped to true meaning PVP will happen regardless of the Town's normal setting (this is undone when the Battle ends.) 
@@ -201,3 +203,7 @@ CaptureSiteRewardTownEvent - thrown when rewards are doled out, allowing you to 
 CaptureSiteOwnerDisplayNameEvent - thrown when a CaptureSite displays their owning town, allowing a plugin to modify the name which is displayed.
 
 CaptureSiteRewardDisplayEvent - thrown when a CaptureSite displays their rewards, allowing a plugin to modify the rewards which are displayed.
+
+PlayerEnterCaptureSiteEvent - thrown when a player walks into or teleports to a CaptureSite.
+
+PlayerExitCaptureSiteEvent - thrown when a player walksout of or teleports from a CaptureSite.
