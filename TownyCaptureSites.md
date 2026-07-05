@@ -127,6 +127,8 @@ The colour of the embed will use the CaptureSites's town colour.
 /t capture - Used to capture a CaptureSite. If there is no defender, it is taken over without a battle.
              If the CaptureSite is already controlled a CaptureBattle begins.
 
+/t abandoncapturesite - Used to abandon a CaptureSite.
+
 /t collectitemsrewards - Used to collect item rewards.
 
 /t collectcommandsrewards - Used to collect command rewards.
@@ -161,6 +163,8 @@ The colour of the embed will use the CaptureSites's town colour.
 #### Permissions
 
 `towny.command.town.capture` - used for `/t capture`.
+
+`towny.command.town.abandoncapturesite` - used for `/t abandoncapturesite`.
 
 `towny.command.town.defend` - used for `/t defend`.
 
