@@ -4,7 +4,9 @@ Are you tired of your players not exploring the map?
 
 Wish public spawning had more hangups?
 
-Wish that players couldn't join a Town before visiting it? 
+Wish that players couldn't join a town before visiting it? 
+
+Wish that mayors couldn't spam new players with invites to join the town?
 
 TownyWayPointTravel is the solution you didn't know you needed!
 
